@@ -1,0 +1,138 @@
+
+C:\AzureFY15TK\06 AzureStorage\tkdxnotlikeDPEPL-SDK25\CurlTest>ab -n 100 -c 10 http://tkdxnotlikedpeplcs.cloudapp.net/Home/Increase/Cat 
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking tkdxnotlikedpeplcs.cloudapp.net (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.5
+Server Hostname:        tkdxnotlikedpeplcs.cloudapp.net
+Server Port:            80
+
+Document Path:          /Home/Increase/Cat
+Document Length:        118 bytes
+
+Concurrency Level:      10
+Time taken for tests:   15.212 seconds
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Non-2xx responses:      100
+Total transferred:      70600 bytes
+HTML transferred:       11800 bytes
+Requests per second:    6.57 [#/sec] (mean)
+Time per request:       1521.181 [ms] (mean)
+Time per request:       152.118 [ms] (mean, across all concurrent requests)
+Transfer rate:          4.53 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       63   67   2.6     67      75
+Processing:    83 1037 2431.5    131   12889
+Waiting:       83 1037 2431.5    130   12889
+Total:        146 1104 2431.7    195   12953
+
+Percentage of the requests served within a certain time (ms)
+  50%    195
+  66%    208
+  75%    212
+  80%    215
+  90%   5414
+  95%   7572
+  98%   7951
+  99%  12953
+ 100%  12953 (longest request)
+
+C:\AzureFY15TK\06 AzureStorage\tkdxnotlikeDPEPL-SDK25\CurlTest>ab -n 100 -c 10 http://tkdxnotlikedpeplcs.cloudapp.net/Home/IncreaseUsingCache/Dog 
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking tkdxnotlikedpeplcs.cloudapp.net (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.5
+Server Hostname:        tkdxnotlikedpeplcs.cloudapp.net
+Server Port:            80
+
+Document Path:          /Home/IncreaseUsingCache/Dog
+Document Length:        118 bytes
+
+Concurrency Level:      10
+Time taken for tests:   6.777 seconds
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Non-2xx responses:      100
+Total transferred:      70600 bytes
+HTML transferred:       11800 bytes
+Requests per second:    14.76 [#/sec] (mean)
+Time per request:       677.677 [ms] (mean)
+Time per request:       67.768 [ms] (mean, across all concurrent requests)
+Transfer rate:          10.17 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       64   67   1.9     67      73
+Processing:    66  574 106.2    603     620
+Waiting:       66  362 162.8    345     615
+Total:        133  641 106.1    670     685
+
+Percentage of the requests served within a certain time (ms)
+  50%    670
+  66%    673
+  75%    675
+  80%    676
+  90%    679
+  95%    682
+  98%    685
+  99%    685
+ 100%    685 (longest request)
+
+C:\AzureFY15TK\06 AzureStorage\tkdxnotlikeDPEPL-SDK25\CurlTest>ab -n 100 -c 10 http://tkdxnotlikedpeplcs.cloudapp.net/Home/IncreaseUsingCacheAndLock/Spider 
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking tkdxnotlikedpeplcs.cloudapp.net (be patient).....done
+
+
+Server Software:        Microsoft-IIS/8.5
+Server Hostname:        tkdxnotlikedpeplcs.cloudapp.net
+Server Port:            80
+
+Document Path:          /Home/IncreaseUsingCacheAndLock/Spider
+Document Length:        118 bytes
+
+Concurrency Level:      10
+Time taken for tests:   6.791 seconds
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Non-2xx responses:      100
+Total transferred:      70600 bytes
+HTML transferred:       11800 bytes
+Requests per second:    14.72 [#/sec] (mean)
+Time per request:       679.140 [ms] (mean)
+Time per request:       67.914 [ms] (mean, across all concurrent requests)
+Transfer rate:          10.15 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       64   67   6.6     66     129
+Processing:    70  576 106.6    598     664
+Waiting:       65  355 162.7    339     660
+Total:        140  643 106.4    664     729
+
+Percentage of the requests served within a certain time (ms)
+  50%    664
+  66%    671
+  75%    672
+  80%    673
+  90%    720
+  95%    726
+  98%    728
+  99%    729
+ 100%    729 (longest request)

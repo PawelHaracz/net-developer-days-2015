@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "TK_ServiceFabricSimpleDemoTransactionalMemory", "TK_ServiceFabricSimpleDemoTransactionalMemory\TK_ServiceFabricSimpleDemoTransactionalMemory.sfproj", "{15F68FDD-072D-486C-8A1B-BA540CCD4061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TKSimpleTransCount", "TKSimpleTransCount\TKSimpleTransCount.csproj", "{181E6B9E-8B17-4667-A4D2-B26806443A9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15F68FDD-072D-486C-8A1B-BA540CCD4061}.Debug|x64.ActiveCfg = Debug|x64
+		{15F68FDD-072D-486C-8A1B-BA540CCD4061}.Debug|x64.Build.0 = Debug|x64
+		{15F68FDD-072D-486C-8A1B-BA540CCD4061}.Debug|x64.Deploy.0 = Debug|x64
+		{15F68FDD-072D-486C-8A1B-BA540CCD4061}.Release|x64.ActiveCfg = Release|x64
+		{15F68FDD-072D-486C-8A1B-BA540CCD4061}.Release|x64.Build.0 = Release|x64
+		{15F68FDD-072D-486C-8A1B-BA540CCD4061}.Release|x64.Deploy.0 = Release|x64
+		{181E6B9E-8B17-4667-A4D2-B26806443A9B}.Debug|x64.ActiveCfg = Debug|x64
+		{181E6B9E-8B17-4667-A4D2-B26806443A9B}.Debug|x64.Build.0 = Debug|x64
+		{181E6B9E-8B17-4667-A4D2-B26806443A9B}.Release|x64.ActiveCfg = Release|x64
+		{181E6B9E-8B17-4667-A4D2-B26806443A9B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

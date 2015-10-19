@@ -1,0 +1,108 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+		"baseSiteName": {
+            "type": "string",
+			"defaultValue": "demomicroservices"
+		},
+         "hostingPlanName": {
+            "type": "string",
+			"defaultValue": "defaultHostingPlanMs1"
+        },
+        "siteLocation": {
+            "type": "string"
+        },
+        "sku": {
+            "type": "string",
+            "allowedValues": [
+                "Free",
+                "Shared",
+                "Basic",
+                "Standard",
+                "Premium"
+            ],
+            "defaultValue": "Free"
+        },
+        "workerSize": {
+            "type": "string",
+            "allowedValues": [
+                "0",
+                "1",
+                "2"
+            ],
+            "defaultValue": "0"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2014-06-01",
+            "name": "[parameters('hostingPlanName')]",
+            "type": "Microsoft.Web/serverfarms",
+            "location": "[parameters('siteLocation')]",
+            "tags": {
+                "displayName": "HostingPlan"
+            },
+            "properties": {
+                "name": "[parameters('hostingPlanName')]",
+                "sku": "[parameters('sku')]",
+                "workerSize": "[parameters('workerSize')]",
+                "numberOfWorkers": 1
+            }
+        },
+        {
+            "apiVersion": "2014-06-01",
+            "name": "[concat(parameters('baseSiteName'),'1')]",
+            "type": "Microsoft.Web/sites",
+            "location": "[parameters('siteLocation')]",
+            "tags": {
+                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "Resource",
+                "displayName": "Website"
+
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
+            ],
+            "properties": {
+                "name": "[concat(parameters('baseSiteName'),'1')]",
+                "serverFarm": "[parameters('hostingPlanName')]"
+            }
+        },
+        {
+            "apiVersion": "2014-06-01",
+            "name": "[concat(parameters('baseSiteName'),'2')]",
+            "type": "Microsoft.Web/sites",
+            "location": "[parameters('siteLocation')]",
+            "tags": {
+                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "Resource",
+                "displayName": "Website"
+
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
+            ],
+            "properties": {
+                "name": "[concat(parameters('baseSiteName'),'2')]",
+                "serverFarm": "[parameters('hostingPlanName')]"
+            }
+        },
+        {
+            "apiVersion": "2014-06-01",
+            "name": "[concat(parameters('baseSiteName'),'3')]",
+            "type": "Microsoft.Web/sites",
+            "location": "[parameters('siteLocation')]",
+            "tags": {
+                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "Resource",
+                "displayName": "Website"
+
+            },
+            "dependsOn": [
+                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
+            ],
+            "properties": {
+                "name": "[concat(parameters('baseSiteName'),'3')]",
+                "serverFarm": "[parameters('hostingPlanName')]"
+            }
+        }
+	]
+}
